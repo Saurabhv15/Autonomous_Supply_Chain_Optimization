@@ -1,0 +1,2 @@
+total_planned_quantity,total_supplier_capacity,baseline_allocation,incremental_allocation,total_allocated_quantity,total_shortage,network_fill_rate_percent,maximum_capacity_coverage_percent,base_procurement_cost,risk_premium,risk_adjusted_procurement_cost
+348922,34126,17063,17063,34126,314796,9.780409375161211,9.780409375161211,16902890,2208763.6341448165,19111653.634144817

@@ -1,0 +1,7 @@
+row_number,risk_id,numeric_claim_count,untraceable_numeric_claims,audit_status
+1,RISK_01,4,"348922.0, 34126.0, 314796.0, 9.78",REVIEW
+2,RISK_02,3,,PASS
+3,RISK_03,4,,PASS
+4,RISK_04,6,,PASS
+5,RISK_05,2,,PASS
+6,RISK_06,0,,PASS

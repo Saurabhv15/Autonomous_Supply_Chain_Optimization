@@ -1,0 +1,4 @@
+priority_tier,nominal_capacity_budget,carried_capacity_received,available_requirement,incremental_allocation,unused_capacity_carried_forward
+Tier 1,11944,0,105978,11944,0
+Tier 2,3413,0,123743,3413,0
+Tier 3,1706,0,102138,1706,0

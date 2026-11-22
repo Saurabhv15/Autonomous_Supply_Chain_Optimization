@@ -1,0 +1,2 @@
+total_warehouses,total_stores,stores_assigned,total_daily_demand,vehicle_capacity,total_vehicles_used,total_route_distance_km,successful_warehouses,failed_warehouses,warehouses_without_stores
+10,20,20,42520,5000,14,6209.717000000001,9,0,1

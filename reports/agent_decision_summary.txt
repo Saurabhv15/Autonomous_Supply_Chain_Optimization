@@ -1,0 +1,58 @@
+SUPPLY CHAIN RULE-BASED DECISION AGENT
+================================================
+
+This agent analyses existing project reports and generates recommendations.
+It does not execute procurement, routing or inventory changes.
+
+PROCUREMENT POSITION
+Planned replenishment: 348,922 units
+Allocated quantity:   34,126 units
+Unallocated shortage: 314,796 units
+Procurement fill rate: 9.78%
+
+SIMULATION SERVICE LEVEL
+Baseline:   7.45%
+Disruption: 6.57%
+Service-level drop: 0.88 percentage points
+Configured service target: 95.00%
+
+Products prioritised: 100
+Products with zero allocation: 0
+Recommendations generated: 6
+
+RECOMMENDATIONS
+------------------------------------------------
+1. [CRITICAL] Customer service
+   Finding: Baseline service level is below the configured target.
+   Action: Investigate the replenishment-capacity constraint and increase available supply before treating the service-level target as achievable.
+   Evidence: Baseline service level=7.45%; configured target=95.00%.
+
+2. [CRITICAL] Procurement capacity
+   Finding: Available supplier allocation is below the planned replenishment requirement.
+   Action: Review additional supplier capacity, qualify alternate suppliers, and phase procurement by product priority tier. Re-run supplier allocation after capacity is updated.
+   Evidence: Planned=348,922; allocated=34,126; shortage=314,796; fill rate=9.78%.
+
+3. [HIGH] Disruption preparedness
+   Finding: Disruption scenario service level is below the configured target.
+   Action: Prepare contingency sourcing and review safety-stock coverage for critical products. Test alternate lead-time and reliability assumptions.
+   Evidence: Disruption service level=6.57%; configured target=95.00%.
+
+4. [HIGH] Lost sales
+   Finding: The disruption simulation records unfulfilled demand.
+   Action: Use the product-priority report to focus scarce inventory on high-priority items, and test whether alternate sourcing reduces lost sales.
+   Evidence: Disruption lost sales=1,255,279 units.
+
+5. [HIGH] Supplier resilience
+   Finding: The disruption scenario reduces the network service level.
+   Action: Evaluate backup suppliers and supplier diversification. Compare the cost of resilience against the service-level benefit in a separate scenario analysis.
+   Evidence: Baseline=7.45%; disruption=6.57%; drop=0.88 percentage points.
+
+6. [MEDIUM] Supplier risk
+   Finding: SUP03 has the highest quantity-weighted risk multiplier among allocated suppliers.
+   Action: Review this supplier's reliability and lead-time assumptions. Assess whether some future volume should be shifted to qualified alternatives.
+   Evidence: Weighted risk multiplier=1.1652; allocated quantity=12,705.
+
+OUTPUT FILES
+D:\MTech in OR\Autonomous_Supply_Chain_Optimization\reports\agent_recommendations.csv
+D:\MTech in OR\Autonomous_Supply_Chain_Optimization\reports\agent_product_priorities.csv
+D:\MTech in OR\Autonomous_Supply_Chain_Optimization\reports\agent_supplier_risk.csv

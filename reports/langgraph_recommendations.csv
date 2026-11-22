@@ -1,0 +1,6 @@
+priority,area,finding,recommended_action,evidence,risk_id
+CRITICAL,Customer service,Baseline service level is below the configured business target.,Investigate the replenishment-capacity constraint before treating the configured service target as achievable.,Baseline=7.45%; target=95.00%.,RISK_BASELINE_SERVICE
+CRITICAL,Procurement capacity,Supplier allocation is below planned replenishment requirement.,"Review additional supplier capacity, qualify alternate suppliers and phase procurement by product priority tier.","Planned=348,922; allocated=34,126; shortage=314,796; fill=9.78%.",RISK_PROCUREMENT_CAPACITY
+HIGH,Disruption preparedness,Disruption service level is below the configured business target.,Prepare contingency sourcing and review safety-stock coverage for critical products.,Disruption=6.57%; target=95.00%.,RISK_DISRUPTION_SERVICE
+HIGH,Lost sales,Unfulfilled demand exists in the disruption scenario.,Test priority-based allocation and alternate sourcing to reduce unfulfilled demand.,"Lost sales=1,255,279 units.",RISK_LOST_SALES
+HIGH,Supplier resilience,Disruption scenario reduces network service level.,Evaluate backup suppliers and supplier diversification; compare resilience cost against service-level benefit.,Baseline=7.45%; disruption=6.57%; drop=0.88 percentage points.,RISK_SERVICE_DEGRADATION

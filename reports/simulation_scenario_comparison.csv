@@ -1,0 +1,3 @@
+scenario,total_demand,fulfilled_demand,lost_sales,service_level_percent,successful_deliveries,failed_deliveries,total_orders,total_received_quantity,total_unreceived_quantity
+Baseline,1270673,94688,1175985,7.451799164694614,99,3,102,33064,1062
+Disruption,1343591,88312,1255279,6.572833548304506,85,17,102,26657,7469

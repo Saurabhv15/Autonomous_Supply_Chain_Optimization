@@ -1,0 +1,16 @@
+check_name,status,details
+Unique replenishment product IDs,PASS,Each product should appear once.
+Unique shortage product IDs,PASS,Each product should appear once.
+Unique supplier IDs,PASS,Each supplier should appear once.
+Non-negative allocations,PASS,Allocated quantities must not be negative.
+Non-negative shortage,PASS,Unfulfilled quantities must not be negative.
+Product demand balance,PASS,Planned quantity = Allocated quantity + Unfulfilled quantity.
+Allocation report consistency,PASS,Allocation CSV totals must match shortage CSV.
+Product fill rate calculation,PASS,Fill rate is independently recalculated.
+Supplier capacity constraints,PASS,Allocation must not exceed supplier capacity.
+Supplier allocation consistency,PASS,Supplier summary must match allocation CSV.
+Unused supplier capacity,PASS,Unused capacity is independently recalculated.
+Supplier utilization calculation,PASS,Supplier utilization is independently recalculated.
+Priority allocation diagnostic,FAIL,"Top 10 priority products received 0 units. This is a diagnostic, not a solver constraint."
+Network demand balance,PASS,Total planned = Total allocated + Total shortage.
+Allocation within total capacity,PASS,Total allocation cannot exceed total supplier capacity.

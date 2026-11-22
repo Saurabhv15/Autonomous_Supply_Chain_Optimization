@@ -1,0 +1,16 @@
+check_name,status,details
+No duplicate store assignments,PASS,Duplicate assignments: 0
+No duplicate store visits,PASS,Duplicate route visits: 0
+All assigned stores are visited,PASS,Missing stores: []
+No unexpected stores in routes,PASS,Unexpected stores: []
+Every assigned store visited exactly once,PASS,"Assigned: 20, Visited: 20"
+All routes start at assigned warehouse,PASS,Valid routes: 14
+All routes return to assigned warehouse,PASS,Valid routes: 14
+Each route belongs to one warehouse,PASS,Valid routes: 14
+All vehicles respect capacity,PASS,Vehicles exceeding capacity: 0
+Cumulative vehicle loads are correct,PASS,Invalid routes: 0
+Store demand matches route demand,PASS,Demand mismatches: 0
+Store routes match warehouse assignments,PASS,Mismatched stores: []
+Warehouse route distances match summary,PASS,Maximum distance difference: 0.000000 km
+Warehouse demand matches assigned stores,PASS,Mismatched warehouses: 0
+Vehicle count matches warehouse summary,PASS,"Routes: 14, Reported vehicles: 14"

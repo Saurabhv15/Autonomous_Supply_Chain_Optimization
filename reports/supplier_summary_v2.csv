@@ -1,0 +1,4 @@
+supplier_id,capacity,allocated_quantity,unused_capacity,utilization_percent,reliability,lead_time_days
+SUP01,8760,8760.0,0.0,100.0,0.96568086938721,5
+SUP02,12661,12661.0,0.0,100.0,0.9754625080575672,6
+SUP03,12705,12705.0,0.0,100.0,0.8696348724598055,5

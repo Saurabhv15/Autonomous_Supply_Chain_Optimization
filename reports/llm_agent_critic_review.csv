@@ -1,0 +1,6 @@
+risk_id,evidence_supported,actionability_score,numeric_claims_supported,issues,improved_action,critic_verdict,numeric_claims_found,unsupported_numeric_claims
+RISK_01,True,5,True,[],Conduct an immediate capacity review with all current suppliers and reallocate existing inventory to the highest‑priority products.,PASS,"['314,796', '348,922', '9.78%', '95%']",[]
+RISK_02,True,5,False,[],Allocate available supply to the five products with the highest priority_score and negotiate expedited shipments or alternative sources for these SKUs.,REVIEW,"['10', '4,320', '5,766', '1.93', '20%']","['1.93', '10', '20%', '5,766']"
+RISK_03,True,4,False,[],Develop a supplier diversification plan that identifies secondary sources for items with the highest risk‑weighted multipliers and start qualification of those suppliers.,REVIEW,"['1', '1', '1.1172', '2', '1.1323', '3', '1.1652']",['1']
+RISK_04,True,4,False,[],Create a contingency logistics plan that pre‑positions safety stock at regional hubs and secures alternative transport contracts for disruption scenarios.,REVIEW,"['85', '17', '6.57%', '7,469', '1,062']",['6.57%']
+RISK_05,True,4,True,[],Implement a dashboard that records daily fill‑rate percentages and updates supplier risk multipliers based on the latest performance data.,PASS,[],[]

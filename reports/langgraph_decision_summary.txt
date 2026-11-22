@@ -1,0 +1,57 @@
+LANGGRAPH SUPPLY CHAIN DECISION WORKFLOW
+====================================================
+Workflow status: VALIDATED
+
+PROCUREMENT
+Planned quantity: 348,922
+Allocated quantity: 34,126
+Shortage quantity: 314,796
+Procurement fill rate: 9.78%
+
+SIMULATION SERVICE LEVEL
+Baseline: 7.45%
+Disruption: 6.57%
+Drop: 0.88 percentage points
+
+Risks detected: 5
+Actions selected: 5
+Recommendations: 5
+
+VALIDATION CHECKS
+[PASS] Every detected risk has a response action — Risks=5, actions=5
+[PASS] Action risk IDs match detected risk IDs — Unmapped risks=[]
+[PASS] Every action has a recommendation — Unmapped actions=[]
+[PASS] Recommendations contain evidence and action — Recommendations checked=5
+[PASS] Procurement quantities reconcile — Planned=348922, allocated=34126, shortage=314796
+
+RECOMMENDATIONS
+1. [CRITICAL] Customer service
+Finding: Baseline service level is below the configured business target.
+Action: Investigate the replenishment-capacity constraint before treating the configured service target as achievable.
+Evidence: Baseline=7.45%; target=95.00%.
+
+2. [CRITICAL] Procurement capacity
+Finding: Supplier allocation is below planned replenishment requirement.
+Action: Review additional supplier capacity, qualify alternate suppliers and phase procurement by product priority tier.
+Evidence: Planned=348,922; allocated=34,126; shortage=314,796; fill=9.78%.
+
+3. [HIGH] Disruption preparedness
+Finding: Disruption service level is below the configured business target.
+Action: Prepare contingency sourcing and review safety-stock coverage for critical products.
+Evidence: Disruption=6.57%; target=95.00%.
+
+4. [HIGH] Lost sales
+Finding: Unfulfilled demand exists in the disruption scenario.
+Action: Test priority-based allocation and alternate sourcing to reduce unfulfilled demand.
+Evidence: Lost sales=1,255,279 units.
+
+5. [HIGH] Supplier resilience
+Finding: Disruption scenario reduces network service level.
+Action: Evaluate backup suppliers and supplier diversification; compare resilience cost against service-level benefit.
+Evidence: Baseline=7.45%; disruption=6.57%; drop=0.88 percentage points.
+
+OUTPUT FILES
+D:\MTech in OR\Autonomous_Supply_Chain_Optimization\reports\langgraph_recommendations.csv
+D:\MTech in OR\Autonomous_Supply_Chain_Optimization\reports\langgraph_product_priorities.csv
+D:\MTech in OR\Autonomous_Supply_Chain_Optimization\reports\langgraph_supplier_risk.csv
+D:\MTech in OR\Autonomous_Supply_Chain_Optimization\reports\langgraph_validation_checks.csv

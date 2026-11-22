@@ -1,0 +1,33 @@
+LLM RECOMMENDATION QUALITY AUDIT
+==========================================
+Recommendation rows: 6
+PASS checks: 10
+FAIL checks: 0
+REVIEW checks: 2
+
+CHECK RESULTS
+                                              check status                                                                                                          details
+                    Required recommendation columns   PASS                                                                                       Rows=6, missing_columns=[]
+                    Risk IDs are present and unique   PASS                                                                                    blank_ids=0, duplicate_ids=[]
+                          Severity labels are valid   PASS                                                                                              invalid_severity=[]
+                                 title is populated   PASS                                                                                                     blank_rows=0
+                              evidence is populated   PASS                                                                                                     blank_rows=0
+                    recommended_action is populated   PASS                                                                                                     blank_rows=0
+                             rationale is populated   PASS                                                                                                     blank_rows=0
+              expected_business_effect is populated   PASS                                                                                                     blank_rows=0
+Human approval is required for every recommendation   PASS                                                                                       approval_required_rows=6/6
+  Recommendations contain an actionable instruction REVIEW                                                                                              actionable_rows=3/6
+     Numeric claims are traceable to source reports REVIEW recommendations_with_untraceable_numbers=1; approximate matching is used, so REVIEW items need manual inspection
+     Procurement quantities reconcile independently   PASS                                                                 planned=348922, allocated=34126, shortage=314796
+
+NUMERIC CLAIM REVIEW
+ row_number risk_id  numeric_claim_count        untraceable_numeric_claims audit_status
+          1 RISK_01                    4 348922.0, 34126.0, 314796.0, 9.78       REVIEW
+          2 RISK_02                    3                                           PASS
+          3 RISK_03                    4                                           PASS
+          4 RISK_04                    6                                           PASS
+          5 RISK_05                    2                                           PASS
+          6 RISK_06                    0                                           PASS
+
+SCOPE LIMITATION
+This audit checks structure, traceability signals, and arithmetic. Approximate numeric matching can produce false positives/negatives. It does not prove factual correctness, operational feasibility, global optimality, or real-world business benefit. A human must review the recommendation text and numeric REVIEW rows.

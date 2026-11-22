@@ -1,0 +1,158 @@
+LLM-POWERED SUPPLY CHAIN DECISION SUPPORT
+================================================
+Generated UTC: 2026-11-04T23:21:44.470735+00:00
+Workflow status: VALIDATED
+
+EXECUTIVE SUMMARY
+The current procurement plan shows a critical shortage, with only 9.78% of the planned 348,922 units allocated, resulting in a service level of 7.45% (baseline) and 6.57% (disruption) far below the 95% target and generating over 1.2 million lost sales. Gaps are especially large for the top 10 products, and the disruption scenario further degrades delivery performance. Limited supplier allocation rows and missing risk multiplier data increase exposure to supplier and logistics disruptions.
+
+QUANTITATIVE EVIDENCE
+{
+  "procurement": {
+    "planned_quantity": 348922,
+    "allocated_quantity": 34126,
+    "shortage_quantity": 314796,
+    "fill_rate_percent": 9.7804,
+    "service_level_target_percent": 95.0
+  },
+  "input_row_counts": {
+    "replenishment_products": 100,
+    "supplier_allocation_rows": 102,
+    "simulation_rows": 2
+  },
+  "supplier_allocation_columns": [
+    "product_id",
+    "supplier_id",
+    "allocated_quantity",
+    "unit_cost",
+    "risk_multiplier",
+    "risk_adjusted_unit_cost"
+  ],
+  "simulation_columns": [
+    "scenario",
+    "total_demand",
+    "fulfilled_demand",
+    "lost_sales",
+    "service_level_percent",
+    "successful_deliveries",
+    "failed_deliveries",
+    "total_orders",
+    "total_received_quantity",
+    "total_unreceived_quantity"
+  ],
+  "simulation_scenarios": [
+    {
+      "scenario": "Baseline",
+      "total_demand": 1270673,
+      "fulfilled_demand": 94688,
+      "lost_sales": 1175985,
+      "service_level_percent": 7.451799164694614,
+      "successful_deliveries": 99,
+      "failed_deliveries": 3,
+      "total_orders": 102,
+      "total_received_quantity": 33064,
+      "total_unreceived_quantity": 1062
+    },
+    {
+      "scenario": "Disruption",
+      "total_demand": 1343591,
+      "fulfilled_demand": 88312,
+      "lost_sales": 1255279,
+      "service_level_percent": 6.572833548304506,
+      "successful_deliveries": 85,
+      "failed_deliveries": 17,
+      "total_orders": 102,
+      "total_received_quantity": 26657,
+      "total_unreceived_quantity": 7469
+    }
+  ],
+  "top_products": [
+    {
+      "product_id": "P033",
+      "_planned": 6829,
+      "_allocated": 1066,
+      "_gap": 5763,
+      "priority_score": 1.9886072436580775
+    },
+    {
+      "product_id": "P055",
+      "_planned": 5466,
+      "_allocated": 853,
+      "_gap": 4613,
+      "priority_score": 1.97994119967688
+    },
+    {
+      "product_id": "P072",
+      "_planned": 6223,
+      "_allocated": 971,
+      "_gap": 5252,
+      "priority_score": 1.9699478259154208
+    },
+    {
+      "product_id": "P049",
+      "_planned": 5699,
+      "_allocated": 890,
+      "_gap": 4809,
+      "priority_score": 1.9670764455312737
+    },
+    {
+      "product_id": "P008",
+      "_planned": 5208,
+      "_allocated": 813,
+      "_gap": 4395,
+      "priority_score": 1.9584587565062093
+    },
+    {
+      "product_id": "P005",
+      "_planned": 5396,
+      "_allocated": 842,
+      "_gap": 4554,
+      "priority_score": 1.9536769225516888
+    },
+    {
+      "product_id": "P087",
+      "_planned": 6359,
+      "_allocated": 993,
+      "_gap": 5366,
+      "priority_score": 1.95249054183121
+    },
+    {
+      "product_id": "P070",
+      "_planned": 5286,
+      "_allocated": 825,
+      "_gap": 4461,
+      "priority_score": 1.9406503548900256
+    },
+    {
+      "product_id": "P043",
+      "_planned": 5119,
+      "_allocated": 799,
+      "_gap": 4320,
+      "priority_score": 1.9369133320475491
+    },
+    {
+      "product_id": "P057",
+      "_planned": 5253,
+      "_allocated": 820,
+      "_gap": 4433,
+      "priority_score": 1.9328956586752275
+    }
+  ],
+  "simulation_service_columns": [
+    "service_level_percent"
+  ]
+}
+
+VALIDATION ERRORS
+[]
+
+LIMITATIONS
+[
+  "Only two simulation scenarios (Baseline and Disruption) are provided; no longer\u2011term forecasts are available.",
+  "Cost data, supplier performance metrics, and actual risk_multiplier values are not included.",
+  "Demand variability and lead\u2011time information are absent, limiting the ability to model safety stock.",
+  "The analysis relies on the supplied metrics; any additional context (e.g., contractual terms) is unknown."
+]
+
+SAFETY NOTE
+Recommendations are advisory only. No purchase order, inventory transfer, supplier communication, or route execution was performed.

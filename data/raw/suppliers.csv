@@ -1,0 +1,4 @@
+supplier_id,reliability,lead_time_days,capacity_per_cycle
+SUP01,0.9656808693872101,5,8760
+SUP02,0.9754625080575673,6,12661
+SUP03,0.8696348724598055,5,12705

@@ -1,0 +1,982 @@
+LLM SUPPLY CHAIN AGENT — CRITIC REVIEW
+====================================================
+Generated UTC: 2026-11-04T23:50:30.520031+00:00
+Workflow status: VALIDATED
+Recommendations: 5
+Critic PASS: 2
+Critic REVIEW: 3
+
+EXECUTIVE SUMMARY
+The project data reveal a critical procurement shortfall, extremely low service levels, and heightened supplier risk, especially under disruption scenarios. Immediate actions to re‑balance allocations, prioritize high‑impact SKUs, diversify suppliers, and improve contingency logistics are required to protect customer service and reduce lost sales.
+
+CRITIC ASSESSMENT
+All five recommendations are supported by the supplied evidence and describe concrete, reviewable actions; no unsupported assumptions or invented figures were found.
+
+QUANTITATIVE EVIDENCE
+{
+  "procurement": {
+    "planned_quantity": 348922,
+    "allocated_quantity": 34126,
+    "shortage_quantity": 314796,
+    "fill_rate_percent": 9.7804,
+    "service_level_target_percent": 95.0
+  },
+  "input_row_counts": {
+    "replenishment_products": 100,
+    "supplier_allocation_rows": 102,
+    "simulation_rows": 2
+  },
+  "top_products": [
+    {
+      "product_id": "P033",
+      "_planned": 6829,
+      "_allocated": 1066,
+      "_gap": 5763,
+      "priority_score": 1.9886072436580775
+    },
+    {
+      "product_id": "P055",
+      "_planned": 5466,
+      "_allocated": 853,
+      "_gap": 4613,
+      "priority_score": 1.97994119967688
+    },
+    {
+      "product_id": "P072",
+      "_planned": 6223,
+      "_allocated": 971,
+      "_gap": 5252,
+      "priority_score": 1.9699478259154208
+    },
+    {
+      "product_id": "P049",
+      "_planned": 5699,
+      "_allocated": 890,
+      "_gap": 4809,
+      "priority_score": 1.9670764455312737
+    },
+    {
+      "product_id": "P008",
+      "_planned": 5208,
+      "_allocated": 813,
+      "_gap": 4395,
+      "priority_score": 1.9584587565062093
+    },
+    {
+      "product_id": "P005",
+      "_planned": 5396,
+      "_allocated": 842,
+      "_gap": 4554,
+      "priority_score": 1.9536769225516888
+    },
+    {
+      "product_id": "P087",
+      "_planned": 6359,
+      "_allocated": 993,
+      "_gap": 5366,
+      "priority_score": 1.95249054183121
+    },
+    {
+      "product_id": "P070",
+      "_planned": 5286,
+      "_allocated": 825,
+      "_gap": 4461,
+      "priority_score": 1.9406503548900256
+    },
+    {
+      "product_id": "P043",
+      "_planned": 5119,
+      "_allocated": 799,
+      "_gap": 4320,
+      "priority_score": 1.9369133320475491
+    },
+    {
+      "product_id": "P057",
+      "_planned": 5253,
+      "_allocated": 820,
+      "_gap": 4433,
+      "priority_score": 1.9328956586752275
+    }
+  ],
+  "simulation_scenarios": [
+    {
+      "scenario": "Baseline",
+      "total_demand": 1270673,
+      "fulfilled_demand": 94688,
+      "lost_sales": 1175985,
+      "service_level_percent": 7.451799164694614,
+      "successful_deliveries": 99,
+      "failed_deliveries": 3,
+      "total_orders": 102,
+      "total_received_quantity": 33064,
+      "total_unreceived_quantity": 1062
+    },
+    {
+      "scenario": "Disruption",
+      "total_demand": 1343591,
+      "fulfilled_demand": 88312,
+      "lost_sales": 1255279,
+      "service_level_percent": 6.572833548304506,
+      "successful_deliveries": 85,
+      "failed_deliveries": 17,
+      "total_orders": 102,
+      "total_received_quantity": 26657,
+      "total_unreceived_quantity": 7469
+    }
+  ],
+  "supplier_summary": [
+    {
+      "supplier_id": "SUP01",
+      "total_allocated_quantity": 8760,
+      "average_unit_cost": 831.4857,
+      "average_risk_adjusted_unit_cost": 928.9022,
+      "weighted_average_risk_multiplier": 1.1172
+    },
+    {
+      "supplier_id": "SUP02",
+      "total_allocated_quantity": 12661,
+      "average_unit_cost": 548.1111,
+      "average_risk_adjusted_unit_cost": 620.6091,
+      "weighted_average_risk_multiplier": 1.1323
+    },
+    {
+      "supplier_id": "SUP03",
+      "total_allocated_quantity": 12705,
+      "average_unit_cost": 234.4194,
+      "average_risk_adjusted_unit_cost": 273.1413,
+      "weighted_average_risk_multiplier": 1.1652
+    }
+  ],
+  "allocation_products": [
+    {
+      "product_id": "P033",
+      "supplier_id": "SUP03",
+      "allocated_quantity": 1066,
+      "unit_cost": 137,
+      "risk_multiplier": 1.1651825637700974,
+      "risk_adjusted_unit_cost": 159.63001123650335
+    },
+    {
+      "product_id": "P055",
+      "supplier_id": "SUP02",
+      "allocated_quantity": 853,
+      "unit_cost": 522,
+      "risk_multiplier": 1.1322687459712166,
+      "risk_adjusted_unit_cost": 591.044285396975
+    },
+    {
+      "product_id": "P072",
+      "supplier_id": "SUP03",
+      "allocated_quantity": 971,
+      "unit_cost": 229,
+      "risk_multiplier": 1.1651825637700974,
+      "risk_adjusted_unit_cost": 266.82680710335234
+    },
+    {
+      "product_id": "P049",
+      "supplier_id": "SUP02",
+      "allocated_quantity": 890,
+      "unit_cost": 694,
+      "risk_multiplier": 1.1322687459712166,
+      "risk_adjusted_unit_cost": 785.7945097040243
+    },
+    {
+      "product_id": "P008",
+      "supplier_id": "SUP01",
+      "allocated_quantity": 65,
+      "unit_cost": 712,
+      "risk_multiplier": 1.117159565306395,
+      "risk_adjusted_unit_cost": 795.4176104981533
+    },
+    {
+      "product_id": "P008",
+      "supplier_id": "SUP02",
+      "allocated_quantity": 748,
+      "unit_cost": 712,
+      "risk_multiplier": 1.1322687459712166,
+      "risk_adjusted_unit_cost": 806.1753471315062
+    },
+    {
+      "product_id": "P005",
+      "supplier_id": "SUP02",
+      "allocated_quantity": 842,
+      "unit_cost": 461,
+      "risk_multiplier": 1.1322687459712166,
+      "risk_adjusted_unit_cost": 521.9758918927308
+    },
+    {
+      "product_id": "P087",
+      "supplier_id": "SUP03",
+      "allocated_quantity": 993,
+      "unit_cost": 142,
+      "risk_multiplier": 1.1651825637700974,
+      "risk_adjusted_unit_cost": 165.45592405535385
+    },
+    {
+      "product_id": "P070",
+      "supplier_id": "SUP02",
+      "allocated_quantity": 825,
+      "unit_cost": 496,
+      "risk_multiplier": 1.1322687459712166,
+      "risk_adjusted_unit_cost": 561.6052980017234
+    },
+    {
+      "product_id": "P043",
+      "supplier_id": "SUP01",
+      "allocated_quantity": 799,
+      "unit_cost": 715,
+      "risk_multiplier": 1.117159565306395,
+      "risk_adjusted_unit_cost": 798.7690891940724
+    },
+    {
+      "product_id": "P057",
+      "supplier_id": "SUP02",
+      "allocated_quantity": 820,
+      "unit_cost": 569,
+      "risk_multiplier": 1.1322687459712166,
+      "risk_adjusted_unit_cost": 644.2609164576222
+    },
+    {
+      "product_id": "P064",
+      "supplier_id": "SUP01",
+      "allocated_quantity": 753,
+      "unit_cost": 969,
+      "risk_multiplier": 1.117159565306395,
+      "risk_adjusted_unit_cost": 1082.5276187818968
+    },
+    {
+      "product_id": "P007",
+      "supplier_id": "SUP03",
+      "allocated_quantity": 1069,
+      "unit_cost": 131,
+      "risk_multiplier": 1.1651825637700974,
+      "risk_adjusted_unit_cost": 152.63891585388276
+    },
+    {
+      "product_id": "P038",
+      "supplier_id": "SUP01",
+      "allocated_quantity": 758,
+      "unit_cost": 836,
+      "risk_multiplier": 1.117159565306395,
+      "risk_adjusted_unit_cost": 933.9453965961462
+    },
+    {
+      "product_id": "P074",
+      "supplier_id": "SUP03",
+      "allocated_quantity": 978,
+      "unit_cost": 173,
+      "risk_multiplier": 1.1651825637700974,
+      "risk_adjusted_unit_cost": 201.57658353222686
+    },
+    {
+      "product_id": "P036",
+      "supplier_id": "SUP03",
+      "allocated_quantity": 1211,
+      "unit_cost": 110,
+      "risk_multiplier": 1.1651825637700974,
+      "risk_adjusted_unit_cost": 128.17008201471072
+    },
+    {
+      "product_id": "P060",
+      "supplier_id": "SUP02",
+      "allocated_quantity": 716,
+      "unit_cost": 698,
+      "risk_multiplier": 1.1322687459712166,
+      "risk_adjusted_unit_cost": 790.3235846879093
+    },
+    {
+      "product_id": "P088",
+      "supplier_id": "SUP03",
+      "allocated_quantity": 830,
+      "unit_cost": 346,
+      "risk_multiplier": 1.1651825637700974,
+      "risk_adjusted_unit_cost": 403.1531670644537
+    },
+    {
+      "product_id": "P089",
+      "supplier_id": "SUP01",
+      "allocated_quantity": 705,
+      "unit_cost": 779,
+      "risk_multiplier": 1.117159565306395,
+      "risk_adjusted_unit_cost": 870.2673013736818
+    },
+    {
+      "product_id": "P031",
+      "supplier_id": "SUP02",
+      "allocated_quantity": 756,
+      "unit_cost": 477,
+      "risk_multiplier": 1.1322687459712166,
+      "risk_adjusted_unit_cost": 540.0921918282703
+    },
+    {
+      "product_id": "P029",
+      "supplier_id": "SUP02",
+      "allocated_quantity": 744,
+      "unit_cost": 568,
+      "risk_multiplier": 1.1322687459712166,
+      "risk_adjusted_unit_cost": 643.1286477116511
+    },
+    {
+      "product_id": "P067",
+      "supplier_id": "SUP01",
+      "allocated_quantity": 327,
+      "unit_cost": 910,
+      "risk_multiplier": 1.117159565306395,
+      "risk_adjusted_unit_cost": 1016.6152044288195
+    },
+    {
+      "product_id": "P068",
+      "supplier_id": "SUP02",
+      "allocated_quantity": 143,
+      "unit_cost": 401,
+      "risk_multiplier": 1.1322687459712166,
+      "risk_adjusted_unit_cost": 454.03976713445786
+    },
+    {
+      "product_id": "P068",
+      "supplier_id": "SUP03",
+      "allocated_quantity": 225,
+      "unit_cost": 401,
+      "risk_multiplier": 1.1651825637700974,
+      "risk_adjusted_unit_cost": 467.2382080718091
+    },
+    {
+      "product_id": "P023",
+      "supplier_id": "SUP03",
+      "allocated_quantity": 398,
+      "unit_cost": 223,
+      "risk_multiplier": 1.1651825637700974,
+      "risk_adjusted_unit_cost": 259.83571172073175
+    },
+    {
+      "product_id": "P069",
+      "supplier_id": "SUP03",
+      "allocated_quantity": 487,
+      "unit_cost": 122,
+      "risk_multiplier": 1.1651825637700974,
+      "risk_adjusted_unit_cost": 142.1522727799519
+    },
+    {
+      "product_id": "P083",
+      "supplier_id": "SUP03",
+      "allocated_quantity": 421,
+      "unit_cost": 202,
+      "risk_multiplier": 1.1651825637700974,
+      "risk_adjusted_unit_cost": 235.36687788155967
+    },
+    {
+      "product_id": "P002",
+      "supplier_id": "SUP01",
+      "allocated_quantity": 372,
+      "unit_cost": 785,
+      "risk_multiplier": 1.117159565306395,
+      "risk_adjusted_unit_cost": 876.9702587655202
+    },
+    {
+      "product_id": "P037",
+      "supplier_id": "SUP01",
+      "allocated_quantity": 320,
+      "unit_cost": 865,
+      "risk_multiplier": 1.117159565306395,
+      "risk_adjusted_unit_cost": 966.3430239900317
+    },
+    {
+      "product_id": "P080",
+      "supplier_id": "SUP02",
+      "allocated_quantity": 334,
+      "unit_cost": 686,
+      "risk_multiplier": 1.1322687459712166,
+      "risk_adjusted_unit_cost": 776.7363597362546
+    },
+    {
+      "product_id": "P091",
+      "supplier_id": "SUP02",
+      "allocated_quantity": 358,
+      "unit_cost": 463,
+      "risk_multiplier": 1.1322687459712166,
+      "risk_adjusted_unit_cost": 524.2404293846733
+    },
+    {
+      "product_id": "P076",
+      "supplier_id": "SUP02",
+      "allocated_quantity": 347,
+      "unit_cost": 501,
+      "risk_multiplier": 1.1322687459712166,
+      "risk_adjusted_unit_cost": 567.2666417315795
+    },
+    {
+      "product_id": "P081",
+      "supplier_id": "SUP01",
+      "allocated_quantity": 326,
+      "unit_cost": 943,
+      "risk_multiplier": 1.117159565306395,
+      "risk_adjusted_unit_cost": 1053.4814700839306
+    },
+    {
+      "product_id": "P035",
+      "supplier_id": "SUP01",
+      "allocated_quantity": 341,
+      "unit_cost": 893,
+      "risk_multiplier": 1.117159565306395,
+      "risk_adjusted_unit_cost": 997.6234918186108
+    },
+    {
+      "product_id": "P094",
+      "supplier_id": "SUP02",
+      "allocated_quantity": 315,
+      "unit_cost": 418,
+      "risk_multiplier": 1.1322687459712166,
+      "risk_adjusted_unit_cost": 473.28833581596854
+    },
+    {
+      "product_id": "P093",
+      "supplier_id": "SUP01",
+      "allocated_quantity": 276,
+      "unit_cost": 849,
+      "risk_multiplier": 1.117159565306395,
+      "risk_adjusted_unit_cost": 948.4684709451294
+    },
+    {
+      "product_id": "P019",
+      "supplier_id": "SUP01",
+      "allocated_quantity": 321,
+      "unit_cost": 847,
+      "risk_multiplier": 1.117159565306395,
+      "risk_adjusted_unit_cost": 946.2341518145166
+    },
+    {
+      "product_id": "P047",
+      "supplier_id": "SUP02",
+      "allocated_quantity": 313,
+      "unit_cost": 473,
+      "risk_multiplier": 1.1322687459712166,
+      "risk_adjusted_unit_cost": 535.5631168443855
+    },
+    {
+      "product_id": "P078",
+      "supplier_id": "SUP03",
+      "allocated_quantity": 375,
+      "unit_cost": 265,
+      "risk_multiplier": 1.1651825637700974,
+      "risk_adjusted_unit_cost": 308.7733793990758
+    },
+    {
+      "product_id": "P065",
+      "supplier_id": "SUP02",
+      "allocated_quantity": 333,
+      "unit_cost": 440,
+      "risk_multiplier": 1.1322687459712166,
+      "risk_adjusted_unit_cost": 498.19824822733534
+    },
+    {
+      "product_id": "P028",
+      "supplier_id": "SUP01",
+      "allocated_quantity": 272,
+      "unit_cost": 831,
+      "risk_multiplier": 1.117159565306395,
+      "risk_adjusted_unit_cost": 928.3595987696143
+    },
+    {
+      "product_id": "P077",
+      "supplier_id": "SUP03",
+      "allocated_quantity": 319,
+      "unit_cost": 363,
+      "risk_multiplier": 1.1651825637700974,
+      "risk_adjusted_unit_cost": 422.9612706485454
+    },
+    {
+      "product_id": "P013",
+      "supplier_id": "SUP01",
+      "allocated_quantity": 264,
+      "unit_cost": 748,
+      "risk_multiplier": 1.117159565306395,
+      "risk_adjusted_unit_cost": 835.6353548491835
+    },
+    {
+      "product_id": "P034",
+      "supplier_id": "SUP02",
+      "allocated_quantity": 286,
+      "unit_cost": 576,
+      "risk_multiplier": 1.1322687459712166,
+      "risk_adjusted_unit_cost": 652.1867976794208
+    },
+    {
+      "product_id": "P009",
+      "supplier_id": "SUP03",
+      "allocated_quantity": 361,
+      "unit_cost": 241,
+      "risk_multiplier": 1.1651825637700974,
+      "risk_adjusted_unit_cost": 280.8089978685935
+    },
+    {
+      "product_id": "P026",
+      "supplier_id": "SUP02",
+      "allocated_quantity": 278,
+      "unit_cost": 661,
+      "risk_multiplier": 1.1322687459712166,
+      "risk_adjusted_unit_cost": 748.4296410869742
+    },
+    {
+      "product_id": "P048",
+      "supplier_id": "SUP01",
+      "allocated_quantity": 277,
+      "unit_cost": 898,
+      "risk_multiplier": 1.117159565306395,
+      "risk_adjusted_unit_cost": 1003.2092896451428
+    },
+    {
+      "product_id": "P079",
+      "supplier_id": "SUP02",
+      "allocated_quantity": 297,
+      "unit_cost": 586,
+      "risk_multiplier": 1.1322687459712166,
+      "risk_adjusted_unit_cost": 663.509485139133
+    },
+    {
+      "product_id": "P056",
+      "supplier_id": "SUP03",
+      "allocated_quantity": 373,
+      "unit_cost": 91,
+      "risk_multiplier": 1.1651825637700974,
+      "risk_adjusted_unit_cost": 106.03161330307887
+    },
+    {
+      "product_id": "P017",
+      "supplier_id": "SUP02",
+      "allocated_quantity": 260,
+      "unit_cost": 537,
+      "risk_multiplier": 1.1322687459712166,
+      "risk_adjusted_unit_cost": 608.0283165865434
+    },
+    {
+      "product_id": "P084",
+      "supplier_id": "SUP01",
+      "allocated_quantity": 248,
+      "unit_cost": 841,
+      "risk_multiplier": 1.117159565306395,
+      "risk_adjusted_unit_cost": 939.5311944226783
+    },
+    {
+      "product_id": "P050",
+      "supplier_id": "SUP01",
+      "allocated_quantity": 210,
+      "unit_cost": 789,
+      "risk_multiplier": 1.117159565306395,
+      "risk_adjusted_unit_cost": 881.4388970267457
+    },
+    {
+      "product_id": "P027",
+      "supplier_id": "SUP02",
+      "allocated_quantity": 233,
+      "unit_cost": 432,
+      "risk_multiplier": 1.1322687459712166,
+      "risk_adjusted_unit_cost": 489.1400982595656
+    },
+    {
+      "product_id": "P075",
+      "supplier_id": "SUP02",
+      "allocated_quantity": 232,
+      "unit_cost": 702,
+      "risk_multiplier": 1.1322687459712166,
+      "risk_adjusted_unit_cost": 794.8526596717941
+    },
+    {
+      "product_id": "P086",
+      "supplier_id": "SUP01",
+      "allocated_quantity": 225,
+      "unit_cost": 715,
+      "risk_multiplier": 1.117159565306395,
+      "risk_adjusted_unit_cost": 798.7690891940724
+    },
+    {
+      "product_id": "P039",
+      "supplier_id": "SUP03",
+      "allocated_quantity": 261,
+      "unit_cost": 312,
+      "risk_multiplier": 1.1651825637700974,
+      "risk_adjusted_unit_cost": 363.5369598962704
+    },
+    {
+      "product_id": "P090",
+      "supplier_id": "SUP01",
+      "allocated_quantity": 208,
+      "unit_cost": 840,
+      "risk_multiplier": 1.117159565306395,
+      "risk_adjusted_unit_cost": 938.4140348573718
+    },
+    {
+      "product_id": "P015",
+      "supplier_id": "SUP01",
+      "allocated_quantity": 182,
+      "unit_cost": 731,
+      "risk_multiplier": 1.117159565306395,
+      "risk_adjusted_unit_cost": 816.6436422389747
+    },
+    {
+      "product_id": "P100",
+      "supplier_id": "SUP03",
+      "allocated_quantity": 299,
+      "unit_cost": 182,
+      "risk_multiplier": 1.1651825637700974,
+      "risk_adjusted_unit_cost": 212.06322660615774
+    },
+    {
+      "product_id": "P099",
+      "supplier_id": "SUP02",
+      "allocated_quantity": 186,
+      "unit_cost": 654,
+      "risk_multiplier": 1.1322687459712166,
+      "risk_adjusted_unit_cost": 740.5037598651757
+    },
+    {
+      "product_id": "P041",
+      "supplier_id": "SUP03",
+      "allocated_quantity": 276,
+      "unit_cost": 206,
+      "risk_multiplier": 1.1651825637700974,
+      "risk_adjusted_unit_cost": 240.02760813664008
+    },
+    {
+      "product_id": "P030",
+      "supplier_id": "SUP02",
+      "allocated_quantity": 175,
+      "unit_cost": 471,
+      "risk_multiplier": 1.1322687459712166,
+      "risk_adjusted_unit_cost": 533.2985793524431
+    },
+    {
+      "product_id": "P063",
+      "supplier_id": "SUP03",
+      "allocated_quantity": 205,
+      "unit_cost": 398,
+      "risk_multiplier": 1.1651825637700974,
+      "risk_adjusted_unit_cost": 463.74266038049876
+    },
+    {
+      "product_id": "P012",
+      "supplier_id": "SUP01",
+      "allocated_quantity": 146,
+      "unit_cost": 976,
+      "risk_multiplier": 1.117159565306395,
+      "risk_adjusted_unit_cost": 1090.3477357390416
+    },
+    {
+      "product_id": "P025",
+      "supplier_id": "SUP01",
+      "allocated_quantity": 179,
+      "unit_cost": 792,
+      "risk_multiplier": 1.117159565306395,
+      "risk_adjusted_unit_cost": 884.7903757226649
+    },
+    {
+      "product_id": "P051",
+      "supplier_id": "SUP01",
+      "allocated_quantity": 136,
+      "unit_cost": 771,
+      "risk_multiplier": 1.117159565306395,
+      "risk_adjusted_unit_cost": 861.3300248512306
+    },
+    {
+      "product_id": "P092",
+      "supplier_id": "SUP01",
+      "allocated_quantity": 151,
+      "unit_cost": 814,
+      "risk_multiplier": 1.117159565306395,
+      "risk_adjusted_unit_cost": 909.3678861594055
+    },
+    {
+      "product_id": "P054",
+      "supplier_id": "SUP02",
+      "allocated_quantity": 154,
+      "unit_cost": 493,
+      "risk_multiplier": 1.1322687459712166,
+      "risk_adjusted_unit_cost": 558.2084917638098
+    },
+    {
+      "product_id": "P085",
+      "supplier_id": "SUP02",
+      "allocated_quantity": 145,
+      "unit_cost": 648,
+      "risk_multiplier": 1.1322687459712166,
+      "risk_adjusted_unit_cost": 733.7101473893483
+    },
+    {
+      "product_id": "P004",
+      "supplier_id": "SUP02",
+      "allocated_quantity": 146,
+      "unit_cost": 466,
+      "risk_multiplier": 1.1322687459712166,
+      "risk_adjusted_unit_cost": 527.6372356225869
+    },
+    {
+      "product_id": "P073",
+      "supplier_id": "SUP02",
+      "allocated_quantity": 174,
+      "unit_cost": 489,
+      "risk_multiplier": 1.1322687459712166,
+      "risk_adjusted_unit_cost": 553.679416779925
+    },
+    {
+      "product_id": "P003",
+      "supplier_id": "SUP02",
+      "allocated_quantity": 130,
+      "unit_cost": 671,
+      "risk_multiplier": 1.1322687459712166,
+      "risk_adjusted_unit_cost": 759.7523285466864
+    },
+    {
+      "product_id": "P032",
+      "supplier_id": "SUP03",
+      "allocated_quantity": 176,
+      "unit_cost": 265,
+      "risk_multiplier": 1.1651825637700974,
+      "risk_adjusted_unit_cost": 308.7733793990758
+    },
+    {
+      "product_id": "P046",
+      "supplier_id": "SUP01",
+      "allocated_quantity": 118,
+      "unit_cost": 972,
+      "risk_multiplier": 1.117159565306395,
+      "risk_adjusted_unit_cost": 1085.879097477816
+    },
+    {
+      "product_id": "P095",
+      "supplier_id": "SUP01",
+      "allocated_quantity": 122,
+      "unit_cost": 903,
+      "risk_multiplier": 1.117159565306395,
+      "risk_adjusted_unit_cost": 1008.7950874716747
+    },
+    {
+      "product_id": "P096",
+      "supplier_id": "SUP03",
+      "allocated_quantity": 160,
+      "unit_cost": 323,
+      "risk_multiplier": 1.1651825637700974,
+      "risk_adjusted_unit_cost": 376.3539680977415
+    },
+    {
+      "product_id": "P022",
+      "supplier_id": "SUP02",
+      "allocated_quantity": 130,
+      "unit_cost": 402,
+      "risk_multiplier": 1.1322687459712166,
+      "risk_adjusted_unit_cost": 455.17203588042906
+    },
+    {
+      "product_id": "P001",
+      "supplier_id": "SUP03",
+      "allocated_quantity": 196,
+      "unit_cost": 134,
+      "risk_multiplier": 1.1651825637700974,
+      "risk_adjusted_unit_cost": 156.13446354519306
+    },
+    {
+      "product_id": "P045",
+      "supplier_id": "SUP03",
+      "allocated_quantity": 205,
+      "unit_cost": 114,
+      "risk_multiplier": 1.1651825637700974,
+      "risk_adjusted_unit_cost": 132.8308122697911
+    },
+    {
+      "product_id": "P071",
+      "supplier_id": "SUP01",
+      "allocated_quantity": 107,
+      "unit_cost": 805,
+      "risk_multiplier": 1.117159565306395,
+      "risk_adjusted_unit_cost": 899.313450071648
+    },
+    {
+      "product_id": "P042",
+      "supplier_id": "SUP01",
+      "allocated_quantity": 98,
+      "unit_cost": 770,
+      "risk_multiplier": 1.117159565306395,
+      "risk_adjusted_unit_cost": 860.2128652859242
+    },
+    {
+      "product_id": "P010",
+      "supplier_id": "SUP03",
+      "allocated_quantity": 196,
+      "unit_cost": 139,
+      "risk_multiplier": 1.1651825637700974,
+      "risk_adjusted_unit_cost": 161.96037636404355
+    },
+    {
+      "product_id": "P098",
+      "supplier_id": "SUP02",
+      "allocated_quantity": 94,
+      "unit_cost": 698,
+      "risk_multiplier": 1.1322687459712166,
+      "risk_adjusted_unit_cost": 790.3235846879093
+    },
+    {
+      "product_id": "P044",
+      "supplier_id": "SUP03",
+      "allocated_quantity": 126,
+      "unit_cost": 386,
+      "risk_multiplier": 1.1651825637700974,
+      "risk_adjusted_unit_cost": 449.7604696152576
+    },
+    {
+      "product_id": "P021",
+      "supplier_id": "SUP02",
+      "allocated_quantity": 115,
+      "unit_cost": 525,
+      "risk_multiplier": 1.1322687459712166,
+      "risk_adjusted_unit_cost": 594.4410916348887
+    },
+    {
+      "product_id": "P011",
+      "supplier_id": "SUP02",
+      "allocated_quantity": 91,
+      "unit_cost": 550,
+      "risk_multiplier": 1.1322687459712166,
+      "risk_adjusted_unit_cost": 622.7478102841692
+    },
+    {
+      "product_id": "P006",
+      "supplier_id": "SUP01",
+      "allocated_quantity": 75,
+      "unit_cost": 865,
+      "risk_multiplier": 1.117159565306395,
+      "risk_adjusted_unit_cost": 966.3430239900317
+    },
+    {
+      "product_id": "P082",
+      "supplier_id": "SUP02",
+      "allocated_quantity": 82,
+      "unit_cost": 465,
+      "risk_multiplier": 1.1322687459712166,
+      "risk_adjusted_unit_cost": 526.5049668766158
+    },
+    {
+      "product_id": "P061",
+      "supplier_id": "SUP01",
+      "allocated_quantity": 72,
+      "unit_cost": 926,
+      "risk_multiplier": 1.117159565306395,
+      "risk_adjusted_unit_cost": 1034.4897574737217
+    },
+    {
+      "product_id": "P052",
+      "supplier_id": "SUP03",
+      "allocated_quantity": 94,
+      "unit_cost": 234,
+      "risk_multiplier": 1.1651825637700974,
+      "risk_adjusted_unit_cost": 272.6527199222028
+    },
+    {
+      "product_id": "P097",
+      "supplier_id": "SUP03",
+      "allocated_quantity": 98,
+      "unit_cost": 277,
+      "risk_multiplier": 1.1651825637700974,
+      "risk_adjusted_unit_cost": 322.75557016431696
+    },
+    {
+      "product_id": "P014",
+      "supplier_id": "SUP01",
+      "allocated_quantity": 66,
+      "unit_cost": 773,
+      "risk_multiplier": 1.117159565306395,
+      "risk_adjusted_unit_cost": 863.5643439818434
+    },
+    {
+      "product_id": "P062",
+      "supplier_id": "SUP01",
+      "allocated_quantity": 70,
+      "unit_cost": 757,
+      "risk_multiplier": 1.117159565306395,
+      "risk_adjusted_unit_cost": 845.689790936941
+    },
+    {
+      "product_id": "P066",
+      "supplier_id": "SUP03",
+      "allocated_quantity": 76,
+      "unit_cost": 359,
+      "risk_multiplier": 1.1651825637700974,
+      "risk_adjusted_unit_cost": 418.300540393465
+    },
+    {
+      "product_id": "P020",
+      "supplier_id": "SUP02",
+      "allocated_quantity": 70,
+      "unit_cost": 477,
+      "risk_multiplier": 1.1322687459712166,
+      "risk_adjusted_unit_cost": 540.0921918282703
+    },
+    {
+      "product_id": "P058",
+      "supplier_id": "SUP03",
+      "allocated_quantity": 110,
+      "unit_cost": 196,
+      "risk_multiplier": 1.1651825637700974,
+      "risk_adjusted_unit_cost": 228.3757824989391
+    },
+    {
+      "product_id": "P024",
+      "supplier_id": "SUP01",
+      "allocated_quantity": 54,
+      "unit_cost": 930,
+      "risk_multiplier": 1.117159565306395,
+      "risk_adjusted_unit_cost": 1038.9583957349473
+    },
+    {
+      "product_id": "P059",
+      "supplier_id": "SUP01",
+      "allocated_quantity": 68,
+      "unit_cost": 756,
+      "risk_multiplier": 1.117159565306395,
+      "risk_adjusted_unit_cost": 844.5726313716347
+    },
+    {
+      "product_id": "P016",
+      "supplier_id": "SUP01",
+      "allocated_quantity": 49,
+      "unit_cost": 796,
+      "risk_multiplier": 1.117159565306395,
+      "risk_adjusted_unit_cost": 889.2590139838904
+    },
+    {
+      "product_id": "P018",
+      "supplier_id": "SUP03",
+      "allocated_quantity": 89,
+      "unit_cost": 171,
+      "risk_multiplier": 1.1651825637700974,
+      "risk_adjusted_unit_cost": 199.24621840468666
+    },
+    {
+      "product_id": "P040",
+      "supplier_id": "SUP02",
+      "allocated_quantity": 46,
+      "unit_cost": 650,
+      "risk_multiplier": 1.1322687459712166,
+      "risk_adjusted_unit_cost": 735.9746848812908
+    },
+    {
+      "product_id": "P053",
+      "supplier_id": "SUP03",
+      "allocated_quantity": 61,
+      "unit_cost": 395,
+      "risk_multiplier": 1.1651825637700974,
+      "risk_adjusted_unit_cost": 460.2471126891885
+    }
+  ]
+}
+
+VALIDATION ERRORS
+[]
+
+LIMITATIONS
+[
+  "Analysis is limited to the supplied project evidence; no external market or cost data are available.",
+  "Quantitative business impact estimates are unavailable; effects are described qualitatively.",
+  "Assumptions about supplier capacity and lead\u2011time improvements are not measured in the data.",
+  "Analysis is limited to the data provided; future demand changes, supplier capacity expansions, or cost variations are not modeled.",
+  "Implementation details such as required budget, staffing, or timeline are not addressed."
+]
+
+SAFETY: Recommendations are advisory only. No purchase order, inventory transfer, supplier communication, or route execution was performed. Human approval is required.

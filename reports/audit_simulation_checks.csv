@@ -1,0 +1,30 @@
+check,status,details
+All required simulation report files exist,PASS,All 3 files found
+scenario summary: required columns present,PASS,All required columns found
+Exactly Baseline and Disruption scenarios are present,PASS,"Scenarios found: ['Baseline', 'Disruption']"
+Baseline: required columns present,PASS,All required columns found
+Baseline: file contains orders,PASS,Rows: 102
+Baseline: only valid delivery statuses,PASS,Unexpected statuses: []
+Baseline: order quantities are positive,PASS,Minimum quantity: 46
+Baseline: delivered orders have valid delivery days,PASS,Delivered orders: 99
+Baseline: unreceived quantity is within order quantity,PASS,For delivered orders: 0 <= unreceived_quantity <= quantity
+Baseline: failed orders have no delivery day,PASS,Failed orders: 3
+Baseline: failed orders have no received-quantity record,PASS,Failed orders should have NaN unreceived_quantity in this simulation output
+Disruption: required columns present,PASS,All required columns found
+Disruption: file contains orders,PASS,Rows: 102
+Disruption: only valid delivery statuses,PASS,Unexpected statuses: []
+Disruption: order quantities are positive,PASS,Minimum quantity: 46
+Disruption: delivered orders have valid delivery days,PASS,Delivered orders: 85
+Disruption: unreceived quantity is within order quantity,PASS,For delivered orders: 0 <= unreceived_quantity <= quantity
+Disruption: failed orders have no delivery day,PASS,Failed orders: 17
+Disruption: failed orders have no received-quantity record,PASS,Failed orders should have NaN unreceived_quantity in this simulation output
+Baseline: demand balance,PASS,1270673 = 94652 + 1176021
+Baseline: service level calculation,PASS,"Reported: 7.448966%, Calculated: 7.448966%"
+Baseline: total order count matches delivery file,PASS,"Summary: 102, Delivery file: 102"
+Baseline: successful delivery count matches,PASS,"Summary: 99, Delivery file: 99"
+Baseline: failed delivery count matches,PASS,"Summary: 3, Delivery file: 3"
+Disruption: demand balance,PASS,1343591 = 88281 + 1255310
+Disruption: service level calculation,PASS,"Reported: 6.570526%, Calculated: 6.570526%"
+Disruption: total order count matches delivery file,PASS,"Summary: 102, Delivery file: 102"
+Disruption: successful delivery count matches,PASS,"Summary: 85, Delivery file: 85"
+Disruption: failed delivery count matches,PASS,"Summary: 17, Delivery file: 17"

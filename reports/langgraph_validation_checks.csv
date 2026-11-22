@@ -1,0 +1,6 @@
+check,status,detail
+Every detected risk has a response action,PASS,"Risks=5, actions=5"
+Action risk IDs match detected risk IDs,PASS,Unmapped risks=[]
+Every action has a recommendation,PASS,Unmapped actions=[]
+Recommendations contain evidence and action,PASS,Recommendations checked=5
+Procurement quantities reconcile,PASS,"Planned=348922, allocated=34126, shortage=314796"

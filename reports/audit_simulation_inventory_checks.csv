@@ -1,0 +1,46 @@
+check,status,details
+Required source columns present,PASS,Inventory and warehouse source schemas checked
+Initial inventory quantities are non-negative,PASS,Minimum initial stock: 1
+Initial inventory has no duplicate warehouse-product rows,PASS,Duplicate rows: 0
+Warehouse IDs are unique,PASS,Duplicate warehouse IDs: 0
+Initial inventory does not exceed warehouse capacity,PASS,Maximum initial capacity excess: -1350
+Baseline: required daily columns present,PASS,Missing: []
+Baseline: required delivery columns present,PASS,Missing: []
+Baseline: required warehouse receipt columns present,PASS,Missing: []
+Baseline: required capacity-event columns present,PASS,Missing: []
+Baseline: simulation numeric fields are valid,PASS,"Checked day, opening inventory, receipts, demand, fulfilled, lost sales and ending inventory"
+Baseline: no negative demand or inventory values,PASS,All daily stock and demand quantities must be >= 0
+Baseline: daily demand balance,PASS,Every row must satisfy demand = fulfilled + lost_sales
+Baseline: fulfilled quantity does not exceed demand,PASS,Maximum fulfilled: 155
+Baseline: no duplicate warehouse-product-day rows,PASS,Duplicate rows: 0
+Baseline: ending inventory respects warehouse capacity,PASS,Maximum ending inventory: 277; capacity data missing: False
+Baseline: first-day opening inventory matches source inventory,PASS,Rows checked: 900; unmatched rows: 0
+Baseline: daily stock-flow equation,PASS,Maximum absolute difference: 0.0
+Baseline: consecutive-day inventory continuity,PASS,Transitions checked: 26100; maximum difference: 0.0
+Baseline: order quantity = received + unreceived,PASS,Maximum absolute difference: 0.0
+Baseline: failed orders have zero received quantity,PASS,Failed orders: 3
+Baseline: delivery totals reconcile to warehouse receipt details,PASS,Maximum difference: 0.0
+Baseline: daily receipts match receipt event day and quantity,PASS,Maximum difference: 0.0; receipt simulation_day compared directly with daily day
+Baseline: warehouse capacity respected after every receipt,PASS,Maximum stock-minus-capacity: -2539
+Baseline: capacity-event log is internally consistent,PASS,Maximum actual excess: -2539; reported excess max: 0
+Baseline: receipt records contain no negative quantities,PASS,Receipt rows: 1343
+Disruption: required daily columns present,PASS,Missing: []
+Disruption: required delivery columns present,PASS,Missing: []
+Disruption: required warehouse receipt columns present,PASS,Missing: []
+Disruption: required capacity-event columns present,PASS,Missing: []
+Disruption: simulation numeric fields are valid,PASS,"Checked day, opening inventory, receipts, demand, fulfilled, lost sales and ending inventory"
+Disruption: no negative demand or inventory values,PASS,All daily stock and demand quantities must be >= 0
+Disruption: daily demand balance,PASS,Every row must satisfy demand = fulfilled + lost_sales
+Disruption: fulfilled quantity does not exceed demand,PASS,Maximum fulfilled: 212
+Disruption: no duplicate warehouse-product-day rows,PASS,Duplicate rows: 0
+Disruption: ending inventory respects warehouse capacity,PASS,Maximum ending inventory: 277; capacity data missing: False
+Disruption: first-day opening inventory matches source inventory,PASS,Rows checked: 900; unmatched rows: 0
+Disruption: daily stock-flow equation,PASS,Maximum absolute difference: 0.0
+Disruption: consecutive-day inventory continuity,PASS,Transitions checked: 26100; maximum difference: 0.0
+Disruption: order quantity = received + unreceived,PASS,Maximum absolute difference: 0.0
+Disruption: failed orders have zero received quantity,PASS,Failed orders: 17
+Disruption: delivery totals reconcile to warehouse receipt details,PASS,Maximum difference: 0.0
+Disruption: daily receipts match receipt event day and quantity,PASS,Maximum difference: 0.0; receipt simulation_day compared directly with daily day
+Disruption: warehouse capacity respected after every receipt,PASS,Maximum stock-minus-capacity: -5094
+Disruption: capacity-event log is internally consistent,PASS,Maximum actual excess: -5094; reported excess max: 0
+Disruption: receipt records contain no negative quantities,PASS,Receipt rows: 1161

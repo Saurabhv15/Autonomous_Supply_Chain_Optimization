@@ -1,0 +1,15 @@
+route_id,warehouse_id,starts_at_depot,ends_at_depot,same_warehouse
+W01_V1,W01,True,True,True
+W01_V2,W01,True,True,True
+W02_V1,W02,True,True,True
+W03_V1,W03,True,True,True
+W03_V2,W03,True,True,True
+W05_V1,W05,True,True,True
+W05_V2,W05,True,True,True
+W06_V1,W06,True,True,True
+W06_V2,W06,True,True,True
+W07_V1,W07,True,True,True
+W08_V1,W08,True,True,True
+W09_V1,W09,True,True,True
+W09_V2,W09,True,True,True
+W10_V1,W10,True,True,True
