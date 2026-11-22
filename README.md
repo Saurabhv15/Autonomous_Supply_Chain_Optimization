@@ -278,7 +278,3 @@ National Institute of Technology, Durgapur
 
 - GitHub: https://github.com/Saurabhv15
 - Portfolio: https://saurabhv15.github.io/
-
-## License
-
-This project is intended for educational, research, and demonstration purposes.
